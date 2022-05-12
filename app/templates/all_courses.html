@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg">
+
+<div class="page">Баа
+	<div class="container">
+				<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="index.html" itemprop="item"><i class="far fa-home"></i></a><meta itemprop="name" content="Главная"><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{% url 'lenta' %}" itemprop="item">Башкы бет</a><meta itemprop="name" content="Кайдзен школа"><meta itemprop="position" content="2"></li><li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>Тренингтер</span><meta itemprop="name" content="Мастер-классы"><meta itemprop="position" content="3"></li></ul>	</div>
+	<section class="block">
+		<div class="container">
+			<h1 class="block-title">Тренингдер</h1>
+			        <div class="nav-wrapper ">
+  <ul class="nav nav-pills">
+
+
+      </ul>
+</div>
+				<div class="row display-flex">
+                    {% for i in all_courses %}
+                                  <div class="col-xs-12 col-sm-6 col-md-4">
+              <a href="{% url 'categorys' i.id %}"
+                 class="post-thumbnail class-card
+               with-flag                              with-speaker                ">
+                                  <div class="post-thumbnail-flag">
+                                                                     {{ i.type }}          </div>
+                                <div class="post-thumbnail-body">
+                  <div class="post-metadata">
+                                                                  <div class="post-metadata-item post-metadata-item-with-bg">
+                                              s    </div>
+                                                                                      <div class="post-metadata-item">
+                                                                              f                  </div>
+                                      </div>
+                  <p class="post-thumbnail-title text-large">{{ i.name }}</p>
+                  <p class="post-thumbnail-subtitle">{{ i.description }}</p>
+                </div>
+                                  <div class="post-thumbnail-footer">
+                                          <div class="post-speaker">
+                        <div class="post-speaker-img">
+                                                      <img src="{% static 'img/logored.png' %}" alt=""/>                                                  </div>
+                        <div class="post-speaker-body">
+                          <p class="post-speaker-title">
+                            Ишкердик академия                          </p>
+                          <p class="post-speaker-subtitle"></p>
+                        </div>
+                                          </div>
+                                  </div>
+              </a>
+                                 </div>
+                    {% endfor %}
+
+                </div>
+
+        </div>
+</div>
+
+					<!-- End Pagination -->
+</div>
+	</section>
+	{% endblock %}

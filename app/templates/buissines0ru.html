@@ -1,0 +1,803 @@
+{% extends 'baserus.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg">
+
+    <script>
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LfG-64aAAAAANo58FvEJ4sHSkExUWPLqwc8KxhG', { action: 'purchase' }).then(function (token) {
+      var recaptchaResponse = document.getElementById('recaptchaResponse');
+      recaptchaResponse.value = token;
+    });
+  });
+
+
+
+
+
+    </script>
+
+    <section class="hero-block block">
+        <div class="container">
+            <div class="hero-block-inner" style="background-image: url('static/img/logoproz.png');">
+                <div class="row">
+                    <div class="col-sm-7 col-md-6 col-md-offset-1 col-lg-5">
+                        <p class="block-title h1">Ишкерлер клуб</p>
+                        <p class="block-subtitle">
+                            Начните непрерывное совершенствование сегодня </p>
+                        <a href="#packages" class="btn btn-primary btn-lg scroll">
+                            Оставить заявку </a>
+                        <a href="#saas" class="btn btn-outline-default btn-lg">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement"
+                <meta itemprop="name" content="Главная">
+                <meta itemprop="position" content="1">
+                </li>
+                <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <meta itemprop="name" content="Кайдзен клуб">
+                    <meta itemprop="position" content="2">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="club-mission block">
+        <div class="container">
+            <div id="saas"></div>
+            <p class="block-title h2 text-center">Миссия клуба</p>
+
+            <div class="club-mission-wrapper">
+                <div class="row display-flex">
+
+                    <div class="col-xs-12 col-md-6">
+
+                        <p>
+                            <b>Ишкерлер клуб - группа,</b>
+                            бизнесменов, инвесторов и индивидуальных предпринимателей, создающих условия для
+                            саморазвития и
+                            развития бизнеса. </p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <p>
+                            Каждый член Клуба может не только перенимать опыт и делиться своими кейсами и компетенциями,
+                            но и способствовать развитию других членов Клуба. </p>
+                        <p>
+                            Все члены Клуба – предприниматели с высокой репутацией и топ-менеджеры. </p>
+                    </div>
+                </div>
+                <div class="row display-flex">
+                    <div class="col-xs-12 col-md-6 col-md-push-6">
+                        <br>
+                        <p class="h5">
+                            В чем наше особенность ? </p>
+                        <ul class="list list-check">
+                            <li>
+                                Предприниматели находят инвесторов.
+                            </li>
+                            <li>
+                                Находите бизнес консултьтанта для расширения вашего бизнеса .
+                            </li>
+                            <li>
+                                присоединяется к среде саморазвитие
+                            </li>
+
+
+                        </ul>
+                        <p>
+                            Будем рады видеть вас в Бизнес-клубе </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <p class="h5">
+                                    <span class="text-small">с уважением</span>
+                                    <br>
+                                    Мыктыбек Арстанбек </p>
+                            </div>
+                            <!--            <div class="col-xs-8 col-sm-5 col-sm-offset-1">-->
+                            <!--              <div class="club-mission-sign">-->
+                            <!--                <img src="" class="img-responsive" alt="speaker-sign"/>              </div>-->
+                            <!--            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-md-pull-6">
+                        <div class="club-mission-img">
+                            <img src="{% static 'img/sqs.jpg' %}" alt="speaker"/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="club-benefits block">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <p class="block-title h2">
+                        Возможности Ишкердик клуба </p>
+                    <p class="block-subtitle">
+                        Участвуйте в мероприятиях различного формата и находите единомышленников-бизнесменов </p>
+                </div>
+            </div>
+            <div class="row display-flex">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">01.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/lecture.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Возможность просмотра тренингов для предпринимателей
+                            </div>
+                            <div class="benefit-subtitle">
+                            </div>
+                            <div class="benefit-inner-footer">
+                                <a href="#modal-benefit-1" class="btn btn-outline-primary" data-toggle="modal">
+                                    Подробнее </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">02.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/online-learning.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Встреча с Мыктыбеком Арстанбеком
+                            </div>
+                            <div class="benefit-subtitle">
+                            </div>
+                            <div class="benefit-inner-footer">
+                                <a href="#modal-benefit-2" class="btn btn-outline-primary" data-toggle="modal">
+                                    Подробнее </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">03.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/video.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Встреча с каждым тренером
+                            </div>
+                            <div class="benefit-subtitle">
+                            </div>
+                            <div class="benefit-inner-footer">
+                                <a href="#modal-benefit-3" class="btn btn-outline-primary" data-toggle="modal">
+                                    Подробнее </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">04.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/conversation-1.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Дискуссионные сессии
+                            </div>
+                            <div class="benefit-subtitle">
+                            </div>
+                            <div class="benefit-inner-footer">
+                                <a href="#modal-benefit-4" class="btn btn-outline-primary" data-toggle="modal">
+                                    Подробнее </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">05.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/idea.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Знакомства
+                            </div>
+                            <div class="benefit-subtitle">
+                                ИШКЕРЛЕР ПЛАТФОРМА
+                            </div>
+                            <div class="benefit-inner-footer">
+                                <a href="#modal-benefit-5" class="btn btn-outline-primary" data-toggle="modal">
+                                    Подробнее </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">06.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/presentation.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Ишкерлер форум
+                            </div>
+                            <div class="benefit-subtitle">
+                            </div>
+                            <div class="benefit-inner-footer">
+                                <a href="#modal-benefit-6" class="btn btn-outline-primary" data-toggle="modal">
+                                    Подробнее </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">07.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/qa.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Сетевые и личные чаты для взаимопомощи
+                            </div>
+                            <div class="benefit-subtitle"></div>
+                            <div class="benefit-inner-footer">
+                                <a href="#modal-benefit-7" class="btn btn-outline-primary" data-toggle="modal">
+                                    Подробнее </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="benefit">
+                        <div class="benefit-inner">
+                            <div class="benefit-number">08.</div>
+                            <div class="benefit-icon">
+                                <img src="{% static 'img/icons/laugh.svg'%}" alt=""/></div>
+                            <div class="benefit-title h4">
+                                Баддинг система
+                            </div>
+                            <div class="benefit-subtitle"></p>
+
+                                <div class="benefit-inner-footer">
+                                    <a href="#modal-benefit-8" class="btn btn-outline-primary" data-toggle="modal">
+                                        Подробнее </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="club-how-to block">
+        <div class="container">
+            <p class="block-title h2 text-center">Этапы регистрации клуба</p>
+            <div class="row display-flex center">
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="club-how-to-item" data-number="1">
+                        <div class="club-how-to-item-icon">
+                            <img src="{% static 'img/icons/contact-form.svg'%}" alt="club-how-to-item-icon"/></div>
+                        <p class="h5 text-small">
+                            Выберите тариф </p>
+                        <p class="text-small">
+                            Подать заявку и выбрать пакет участия с менеджером </p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="club-how-to-item" data-number="2">
+                        <div class="club-how-to-item-icon">
+                            <img src="{% static 'img/icons/debit-card.svg' %}" alt="club-how-to-item-icon"/></div>
+                        <p class="h5 text-small">
+                            Сделай свой выбор </p>
+                        <p class="text-small">
+                            Пройти отбор в качестве члена клуба и оплатить выбранный пакет участия </p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="club-how-to-item" data-number="3">
+                        <div class="club-how-to-item-icon">
+                            <img src="{% static 'img/icons/checklist.svg' %}" alt="club-how-to-item-icon"/></div>
+                        <p class="h5 text-small">
+                            Пройти регистрацию </p>
+                        <p class="text-small">
+                            Проходите отбор, и заполняете анкету </p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="club-how-to-item" data-number="4">
+                        <div class="club-how-to-item-icon">
+                            <img src="{% static 'img/icons/coworking.svg'%}" alt="club-how-to-item-icon"/></div>
+                        <p class="h5 text-small">
+                            Участвовать в клубном процессе </p>
+                        <p class="text-small">
+                            Вы участвуете во всех клубных мероприятиях и встречах </p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="club-how-to-item" data-number="5">
+                        <div class="club-how-to-item-icon">
+                            <img src="{% static 'img/icons/counting.svg'%}" alt="club-how-to-item-icon"/></div>
+                        <p class="h5 text-small">
+                            Мы принимаем ваше членство в клубе </p>
+                        <p class="text-small">
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="club-how-to-item" data-number="6">
+                        <div class="club-how-to-item-icon">
+                            <img src="{% static 'img/icons/hired.svg'%}" alt="club-how-to-item-icon"/></div>
+                        <p class="h5 text-small">
+                            Вы станете полноправным участником клуба </p>
+                        <p class="text-small">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="club-packages block">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <p class="block-title h2 text-center">
+                        Выберите тариф </p>
+                    <p class="block-subtitle">
+                       Каждый тариф имеет свои требования и возможности. Прочитайте каждое из них полностью
+                        выйдите из системы и выберите тариф регистрации </p>
+                </div>
+            </div>
+            <div class="row display-flex center">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="package">
+                        <div class="package-title">Базовый пакет</div>
+                        <div class="package-price">
+                <span>
+                  1 400,00 $                </span>
+                        </div>
+                        <p class="package-note">
+                            Только семинары и статьи </p>
+                        <div class="package-footer">
+                            <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=1400&pg_currency=USD&pg_description=%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9+&pg_salt=hpYoHepk4tHcagKu&pg_language=ru&pg_sig=e01c16f25af91a073e812e4fbe31f587"
+                               class="btn btn-default-primary btn-lg btn-block">Купить</a> <a
+                                href="{% url 'support' %}" class="btn btn-link-dark btn-block">Подробнее</a></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="package popular">
+                        <div class="package-flag">Рекомендуем</div>
+                        <div class="package-title">Бизнес - пакет</div>
+                        <div class="package-price">
+                <span>
+                  2 400,00 $                </span>
+                        </div>
+                        <p class="package-note">
+                            Бардык семинарлар жана макалалар </p>
+                        <div class="package-footer">
+                            <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=2400&pg_currency=USD&pg_description=%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81&pg_salt=imCPX4ETgaWmFoeW&pg_language=ru&pg_sig=d82f1597a53efc00899395f1bffb7f87"
+                               class="btn btn-default-primary btn-lg btn-block">Купить</a> <a
+                                href="{% url 'support' %}" class="btn btn-link-dark btn-block">Подробнее</a></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="package">
+                        <div class="package-title">Премиум - пакет</div>
+                        <div class="package-price">
+                <span>
+                  5 500,00 $                </span>
+                        </div>
+                        <p class="package-note">
+                            Все тренинги, семинары и статьи </p>
+                        <div class="package-footer">
+                            <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=5500&pg_currency=USD&pg_description=premium&pg_salt=JwlQsAqLLWp94oz4&pg_language=ru&pg_sig=2f84db4efef768be8bb8763d884a0aff"
+                               class="btn btn-default-primary btn-lg btn-block">Купить</a> <a
+                                href="{% url 'support' %}" class="btn btn-link-dark btn-block">Подробнее</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="checkout checkout-course block">
+        <div class="container">
+            <h1 class="block-title">Дополнительное информация</h1>
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-6 col-lg-5 col-lg-push-7">
+                    <div class="checkout-course-form">
+                        <p class="block-subtitle">
+                            За дополнительной информацией оставьте заявку </p>
+                        <form method="POST" accept-charset="utf-8" class="order-help-form"
+                              action="{% url 'packages1' %}">{% csrf_token %}{{ form.as_p }}
+                            <div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+                            <div class="row form-row">
+                                <div class="row form-row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <div class="input checkbox"><input type="hidden" name="terms_agreement"
+                                                                               value="0"/><label
+                                                    for="terms-agreement"><input type="checkbox" name="terms_agreement"
+                                                                                 value="1" checked="checked"
+                                                                                 id="terms-agreement"><span> <a
+                                                    href="{% url 'terms_of_service'%}" target="_blank">Я согласен с условиями оказание услуг</a></span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="hidden" name="package_id" value="4"/> <input type="hidden"
+                                                                                                  name="recaptcha_response"
+                                                                                                  id="recaptchaResponse"/>
+                                        <button class="btn btn-primary btn-lg btn-block btn-submit" type="submit">
+                                            Отправить
+                                        </button>
+                                    </div>
+                                </div>
+                        </form>
+                        <br/>
+                        <p class="text-small text-muted">
+                            С вами свяжутся наши менеджеры </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+<section class="faq block">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-lg-2">
+                <div class="faq-help-block-description">
+                    <p class="h2 block-title">Остались вопросы?</p>
+                </div>
+            </div>
+            <div class="col-sm-8 col-lg-8 col-lg-offset-2">
+                <div class="panel-group panel-group-bordered" id="faq-accordion" role="tablist"
+                     aria-multiselectable="true">
+                    <div class="panel panel-default active">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-5">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-5" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-5">
+                                    Что такое "Ишкердик академия" ? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-5" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-5">
+                            <div class="panel-body">
+                                <p>
+                                    Платформа «Ишкердик академия» первой в Кыргызстане запустила уникальную платформу
+                                    для развития бизнеса и личности. Здесь вы можете прочитать различные тренинги,
+                                    семинары и статьи, которые улучшат вашу личную жизнь и бизнес. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-1">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-1" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-1">
+                                    Чем отличается регистрация на семинары от регистрации на тренинги? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-1" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-1">
+                            <div class="panel-body">
+                                <p>
+                                    Раздел «Тренинги» платформы включает в себя тренинги и курсы по нескольким
+                                    направлениям. Каждый из них состоит из нескольких разделов и этапов. Каждый из них
+                                    имеет более длительный срок службы и больше по размеру.
+                                    А на мастер-классах вы получаете краткие 60 минут тренеров. Вы будете свидетелями
+                                    уроков раньше. </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-2">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-2" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-2">
+                                    Почему ежемесячная подписка раскрывает информацию только в категории «новые
+                                    статьи»? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-2" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-2">
+                            <div class="panel-body">
+                                <p>
+                                    Мы регулярно публикуем новые статьи на платформе. Видны только статьи с пометкой
+                                    «новые», чтобы они не смешивались с предыдущими статьями, и вы могли следить за
+                                    предыдущей информацией и переходить к новым сообщениям. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-3">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-3" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-3">
+                                    Если у меня месячная подписка, могу ли я перейти на годовую подписку? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-3" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-3">
+                            <div class="panel-body">
+                                <p>
+                                    Да, ты можешь. Все, что вам нужно сделать, это оплатить разницу между «месячным»
+                                    пакетом и «годовым» пакетом. Перейдя на годовой пакет, вам будут доступны все курсы
+                                    в разделе «тренинги». </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-4">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-4" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-4">
+                                    Как я могу получить доступ ко всем тренингам платформы? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-4" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-4">
+                            <div class="panel-body">
+                                <p>
+                                    Для этого вам необходимо подписаться на пакет «годовой +». С этим тарифом вам будут
+                                    доступны не только все текущие тренинги, но и будущие анонсированные курсы. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-6">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-6" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-6">
+                                    Месячная/годовая подписка на платформу действует только до конца текущего
+                                    месяца/года? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-6" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-6">
+                            <div class="panel-body">
+                                <p>
+                                    Ровно месяц/год отсчитывается с момента регистрации по любому тарифу. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-8">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-8" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-8">
+                                    Могу ли я читать онлайн? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-8" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-8">
+                            <div class="panel-body">
+                                <p>
+                                    Да, вы можете учиться онлайн и офлайн на нашей обучающей платформе </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-9">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-9" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-9">
+                                    Могу ли я вернуть свои деньги? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-9" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-9">
+                            <div class="panel-body">
+                                <p>
+                                    Если вы произвели оплату в полном объеме в соответствии с «соглашением об
+                                    исполнении», ваша заявка будет рассмотрена в течение 14 дней и будет принято
+                                    решение. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-10">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-10" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-10">
+                                    Информация о тренинге жаңы жашоо </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-10" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-10">
+                            <div class="panel-body">
+                                <p>
+                                    Чтобы увидеть полное обучение, нажмите на кнопку подробнее или нажмите кнопку
+                                    купить </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-11">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-11" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-11">
+                                    Ишкердик академия только в Бишкеке ? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-11" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-11">
+                            <div class="panel-body">
+                                <p>
+                                    Ишкердик академия доступно в Бишкеке, в Оше и Москве </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-7">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                                   href="kaizen-school.html#faq-accordion-panel-7" aria-expanded="true"
+                                   aria-controls="faq-accordion-panel-7">
+                                    Что такое "БИЗНЕС НӨЛДӨН"? </a>
+                            </h4>
+                        </div>
+                        <div id="faq-accordion-panel-7" class="panel-collapse collapse" role="tabpanel"
+                             aria-labelledby="faq-accordion-panel-heading-7">
+                            <div class="panel-body">
+                                <p>
+                                    "БИЗНЕС НӨЛДӨН" это 2-х месячное обучение на этом тренинге вы - начните свой бизнес
+                                    с нуля
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Club modals-->
+<div class="modal fade" id="modal-benefit-1" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Ишкерлер үчүн тренингдердин бардык материалдарын көрүү мүмкүнчүлүгү</p>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Мыктыбек Арстанбек менен жолугушуу</p>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-3" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Спикерлер менен бетме-бет көрүшүү </p>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-4" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Оффлайн жолугушуу сиздин шаарыңызда</p>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-5" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Таанышуу</p>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Ай сайын клубдун мүчөлөрүнүн онлайн жолугушуулары, конкреттүү иштердин деталдуу анализи жана Клуб
+                    мүчөлөрүнүн суроолору </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-6" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Ишкерлер форуму</p>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Кайдзен клубуна кошулган ар бир катышуучу өз ордунда өнөктөштөрдү жана насаатчыларды табуу
+                    мүмкүнчүлүгүнө ээ. Өзүңүздүн чөйрөңүздө тажрыйба, кейстер жана компетенциялар менен алмашуу. Бул
+                    долбоорлорду иштеп чыгууда жана масштабдоодо сезилерлик натыйжаларды берет. </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-7" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Тармак жана өз ара жардам көрсөтүү үчүн жеке чаттар</p>
+            </div>
+            <div class="modal-body">
+                <p>Ишкерлер клубунун мүчөлөрү Мыктыбек Арстанбек менен Telegram чатына, ошондой эле жабык эксперттик
+                    чаттарга кирүү мүмкүнчүлүгүнө ээ болушат, бул алардын суроо-талаптарына жоопторду жана чындап
+                    керектүү жана баалуу маалыматтарды алууну кыйла тездетет</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-8" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <p class="modal-title h4">Баддинг системасы</p>
+            </div>
+            <div class="modal-body">
+                <p>Buddy системасы максаттарга (жеке же корпоративдик), ошондой эле жаңы көндүмдөрдү алууда колдоо
+                    көрсөтөт. Бул система Ишкердик платформасында окуунун жана Ишкерлер клубунун бардык жолугушууларына
+                    жана программаларына катышуунун эффективдүүлүгүн бир топ жогорулатат. Бадди - бул катышуучуга оор
+                    кырдаалдарда жардам берген жана ага моралдык колдоо көрсөткөн жакын дос. Ишкерлер клубунун бизнес
+                    консьерждери сизге досуңузду тандоого жана өз ара өсүү жана колдоо үчүн үзгүлтүксүз онлайн
+                    жолугушууларды пландаштырууга жардам берет. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End club modals-->
+{% endblock %}

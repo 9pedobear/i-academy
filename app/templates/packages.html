@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg">
+
+<script>
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LfG-64aAAAAANo58FvEJ4sHSkExUWPLqwc8KxhG', { action: 'purchase' }).then(function (token) {
+      var recaptchaResponse = document.getElementById('recaptchaResponse');
+      recaptchaResponse.value = token;
+    });
+  });
+</script>
+
+<div class="page">
+  <div class="container">
+        <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><i class="far fa-home"></i></a><meta itemprop="name" content="Главная"><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{% url 'buissines0' %}" itemprop="item">Ишкерлер клубу</a><meta itemprop="name" content="Кайдзен школа"><meta itemprop="position" content="2"></li><li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>Катталуу тарифи</span><meta itemprop="name" content="Пакеты участия"><meta itemprop="position" content="3"></li></ul>  </div>
+      <section id="packages" class="packages block">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 text-center">
+            <p class="block-title h2">
+              Сайтка жазылуу тарифин тандаңыз            </p>
+            <p class="block-subtitle text-large">
+              Ишкерлердин жеке потенциалын өстүрүүгө жана бизнесин кеңейтүүгө мүмкүнчүлүк түзгөн "ИШКЕРЛЕР КЛУБУНА" жазылыңыз!           </p>
+            <div class="nav-wrapper center">
+              <ul class="nav nav-pills nav-switcher">
+                <li class="active">
+                  <a href="#">Тренингдер</a>                </li>
+                <li>
+                  <a href="{% url 'packages1' %}">Ишкерлер клубу</a>                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row display-flex center">
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="package">
+                                <div class="package-title">Ай</div>
+                <div class="package-price">
+                  <span>
+                    19,00 $                  </span>
+                                  </div>
+                <div class="package-price-frequency">
+                  <span>Ай сайын</span>
+                </div>
+                                  <div class="package-body">
+                    <ul>
+                                              <li>
+                          Ишкердик академияснын жаңы мастер-класстары                        </li>
+                                              <li>
+                          Ай сайын 6 жаңы макала                       </li>
+                                          </ul>
+                  </div>
+                                <div class="package-footer">
+                                      <a href="{% url 'payments_month' %}" class="btn btn-default-primary btn-lg btn-block">Сатып алуу</a>                                  </div>
+              </div>
+            </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="package">
+                                <div class="package-title">Жыл</div>
+                <div class="package-price">
+                  <span>
+                    225,00 $                  </span>
+                                  </div>
+                <div class="package-price-frequency">
+                  <span>Жыл сайын</span>
+                </div>
+                                  <div class="package-body">
+                    <ul>
+                                              <li>
+                          Ишкердик академияснын бардык мастер-класстары                         </li>
+                                              <li>
+                          Ай сайын 6 жаңы макала                        </li>
+                                              <li>
+                          Мыктыбек Арстанбек менен ай сайын суроо-жооп вебинар сессиялары                        </li>
+                                          </ul>
+                  </div>
+                                <div class="package-footer">
+                                      <a href="{% url 'payments_years' %}" class="btn btn-default-primary btn-lg btn-block">Сатып алуу</a>                                  </div>
+              </div>
+            </div>
+                      <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="package popular">
+                                  <div class="package-flag">Сунуштайбыз</div>
+                                <div class="package-title">Жыл +</div>
+                <div class="package-price">
+                  <span>
+                    585,00 $                  </span>
+                                      <span class="strikethrough">
+                      825,00 $                    </span>
+                                  </div>
+                <div class="package-price-frequency">
+                  <span>Жыл сайын</span>
+                </div>
+                                  <div class="package-body">
+                    <ul>
+                                              <li>
+                          Ишкердик академияснын бардык мастер-класстары                        </li>
+                                              <li>
+                          Ай сайын 6 жаңы макала                         </li>
+                                              <li>
+                          Мыктыбек Арстанбек менен ай сайын суроо-жооп вебинар сессиялары                        </li>
+                                              <li>
+                          "Бизнес нөлдөн" тренингине мүмкүндүк алуу                      </li>
+                                              <li>
+                          &quot;Смм жана Таргет&quot;                        </li>
+                                              <li>
+                          &quot;Оратор жана блогер&quot;                        </li>
+                                              <li>
+                          "Акча сарптоо"                         </li>
+                                              <li>
+                          "Сатуу техникасы"                         </li>
+                                              <li>
+                           &quot;Инвестиции&quot; тренингине доступ ала алсыздар                        </li>
+                                          </ul>
+                  </div>
+                                <div class="package-footer">
+                                      <a href="{% url 'payments_years_pluse' %}" class="btn btn-default-primary btn-lg btn-block">Сатып алуу</a>                                  </div>
+              </div>
+            </div>
+                  </div>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="text-muted text-small text-center">
+                        </div>
+          </div>
+        </div>
+                            <div class="packages-help-block">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="packages-help-block-description">
+                  <p class="h3 text-uppercase">
+                    Тандоодо жардам берүү үчүн                  </p>
+                  <div class="row">
+                    <div class="col-sm-8 col-md-12 col-lg-10">
+                      <p>
+                        Сурам калтырыңыз жана биздин менеджер сиз менен байланышып, бардык суроолоруңузга жооп берет                     </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="packages-help-block-inner">
+                   <form method="POST" accept-charset="utf-8" class="order-help-form" action="{% url 'packages1' %}">{% csrf_token %}{{ form.as_p }}<div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>                                    <div class="row form-row">
+                    <div class="row form-row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <div class="input checkbox"><input type="hidden" name="terms_agreement" value="0"/><label for="terms-agreement"><input type="checkbox" name="terms_agreement" value="1" checked="checked" id="terms-agreement"><span> <a href="{% url 'terms_of_service'%}" target="_blank">Мен тейлөө шарттарын окуп чыктым жана макулмун</a></span></label></div>                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="hidden" name="package_id" value="4"/>                      <input type="hidden" name="recaptcha_response" id="recaptchaResponse"/>                                            <button class="btn btn-primary btn-lg btn-block btn-submit" type="submit">Жөнөтүү</button>                    </div>
+                  </div>
+                  </form>            </div>
+              </div>
+            </div>
+          </div>
+                </div>
+    </section>
+   <section class="faq block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-lg-2">
+        <div class="faq-help-block-description">
+          <p class="h2 block-title">Кошумча суроолорго  жооптор?</p>
+        </div>
+      </div>
+      <div class="col-sm-8 col-lg-8 col-lg-offset-2">
+        <div class="panel-group panel-group-bordered" id="faq-accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default active">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-5">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-5" aria-expanded="true" aria-controls="faq-accordion-panel-5">
+                  Ишкердик Академия деген эмне?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-5">
+              <div class="panel-body">
+                <p>
+                  Ишкердик Академия бул - окуу борбору, 3 жылдык тажрыйбасы менен, ушул убакыт ичинде биз 30 000 ашык ишкерлерди окутуп алардын ийгиликтүү бизнес алып кетишине жардам бердик.                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-1" aria-expanded="true" aria-controls="faq-accordion-panel-1">
+                   Webilim деген эмне?                 </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-1">
+              <div class="panel-body">
+                <p>
+                  Webilim бул онлайн форматтагы окуу платформасы               </p>
+
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-2">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-2" aria-expanded="true" aria-controls="faq-accordion-panel-2">
+                  Тапкан акчамдын кайда кетип жатканын билбеймин?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-2">
+              <div class="panel-body">
+                <p>
+                                    Аз акчаны тартиптей албаган адам, көп акчаны да тартиптей албайт. Анткени келип жаткан акчанын кирешеси да, чыгашасы да так эмес. Натыйжада, тапкан акчасынан 2-3 эсе чыгаша кылып жатканын билбейт. Кантип эле?🤔 Эгерде акчаңыздын агымын туура жолго салам десеңиз, анда сизге "АКЧА САРПТОО" онлайн тренингин сунуштайбыз💸                               </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-3" aria-expanded="true" aria-controls="faq-accordion-panel-3">
+                  «СҮРДУ ЖЕҢҮҮ + ОРАТОР» курсу деген эмне ?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-3">
+              <div class="panel-body">
+                <p>
+                  Денеңиз менен тилиңиз бирдей сүйлөсүн. Мына ошондо гана сиздин ой жеткиликтүү, так жана ишенимдүү болот. Эгер посту жаккан болсосактап алыңыз. Ал эми  үйрөнгүңүз келсе «СҮРДУ ЖЕҢҮҮ + ОРАТОР» тренингине катталыңыз.                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-4">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-4" aria-expanded="true" aria-controls="faq-accordion-panel-4">
+                  “ЭКСПРЕСС БИЗНЕС” тренинги жөнүндө маалымат?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-4">
+              <div class="panel-body">
+                <p>
+                  - Кытайдан товарлардын сапаты кандай келет? </p><p>- Кандай товарларды алдырса болот?</p><p>- Кытай менен бизнести кантип баштайм?</p><p>- Товарым келбей калсачы?</p><p>Ушул суроолор тынчыңызды алып, ойлондуруп жатса сизди     Экспресс бизнес тренингинде күтөбүз.           </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-6">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-6" aria-expanded="true" aria-controls="faq-accordion-panel-6">
+                  ИНСТАГРАМдан акча тапса болобу??                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-6">
+              <div class="panel-body">
+                <p>
+                  Ооба, акча тапса болот. Болгондо да 10 000 сомдон баштап 100 000 сомго чейин киреше тапсаңыз болот. </p>  <p>Кантип?🤔 </p><p>- СММ адиси болуп😉 </p><p>- Азыр таш ыргытсаң эле СММ адисинин башына келип түшөт, мага жумуш жок калды окшойт. </p><p>- Алгач окуңуз, практикада колдонуңуз. Эгер берилген тапшырмаларды так, туура аткарып, өзүңүздүн чыгармачылыгыңызды көрсөтө алсаңыз, биз жумуш менен камсыздайбыз.               </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-8">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-8" aria-expanded="true" aria-controls="faq-accordion-panel-8">
+                  Онлайн окуса болобу?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-8">
+              <div class="panel-body">
+                <p>
+                 Ооба биздин окуу платформабызда онлайн жана оффлайн форматта окусаңыз болот                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-9">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-9" aria-expanded="true" aria-controls="faq-accordion-panel-9">
+                    Инвестиция курсу жөнүндө маалымат ?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-9">
+              <div class="panel-body">
+                <p>
+                  Шылуундар кыймылсыз мүлктү, облигацияларды жана акцияларды сатып алууну сунуштап, курулушка жана айыл чарбага инвестиция кылуу боюнча убада беришет жана алдап кетишет😏. Мындай көрүнүштөрдү келип чыгышына Элибиздин ИНВЕСТИЦИЯНЫ туура эмес түшүнүп, бул боюнча сабатынын аздыгы себеп болууда. Ошондуктан инвестор, бизнес-тренер Курманбек Жоошбаев ХАЛАЛ ИНВЕСТИЦИЯ боюнча тренинг                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-10">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-10" aria-expanded="true" aria-controls="faq-accordion-panel-10">
+                Жаңы жашоо тренинги жөнүндө маалымат</a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-10">
+              <div class="panel-body">
+                <p>
+                  Тренингди толук көрүү үчүн адистен кеңеш алуу баскычын басыңыз же сатып алуу кнопкасын басыңыз                              </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-11">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-11" aria-expanded="true" aria-controls="faq-accordion-panel-11">
+                  Ишкердик академия Бишкекте эле барбы ?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-11">
+              <div class="panel-body">
+                <p>
+                  Ишкердик академия Бишкекте, Ошто, Москвада бар, ошондой эле сиз окууну онлайн улантсаңыз  болот                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-7">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-7" aria-expanded="true" aria-controls="faq-accordion-panel-7">
+                  БИЗНЕС НӨЛДӨН деген эмне?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-7">
+              <div class="panel-body">
+                <p>
+                  БИЗНЕС НӨЛДӨН бул 2-айлык тренинг бул тренингте сиз - бизнесиңизди    НӨЛДӨН баштайсыз
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+	{% endblock %}

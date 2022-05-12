@@ -1,0 +1,647 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg">
+
+<script>
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LfG-64aAAAAANo58FvEJ4sHSkExUWPLqwc8KxhG', { action: 'purchase' }).then(function (token) {
+      var recaptchaResponse = document.getElementById('recaptchaResponse');
+      recaptchaResponse.value = token;
+    });
+  });
+</script>
+
+<section class="hero-block block">
+  <div class="container">
+    <div class="hero-block-inner" style="background-image: url('static/img/logoproz.png');">
+      <div class="row">
+        <div class="col-sm-7 col-md-6 col-md-offset-1 col-lg-5">
+          <p class="block-title h1">Ишкерлер клубу</p>
+          <p class="block-subtitle">
+            Үзгүлтүксүз жакшыртууну бүгүн баштаңыз          </p>
+                      <a href="#packages" class="btn btn-primary btn-lg scroll">
+              Катталуу            </a>
+          <a href="#saas" class="btn btn-outline-default btn-lg">Кененирээк</a>
+                  </div>
+      </div>
+    </div>
+        <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement"<meta itemprop="name" content="Главная"><meta itemprop="position" content="1"></li><li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="name" content="Кайдзен клуб"><meta itemprop="position" content="2"></li></ul></div>
+</section>
+<section class="club-mission block">
+  <div class="container">
+  <div id="saas"></div>
+    <p class="block-title h2 text-center">Клубдун миссиясы</p>
+
+    <div class="club-mission-wrapper">
+      <div class="row display-flex">
+
+        <div class="col-xs-12 col-md-6">
+
+          <p>
+            <b>Ишкерлер клубу - бизнесмендер,</b>
+            инвесторлор жана жеке ишкерлер өзүн өстүрүүсүнө, бизнесин өнүктүрүүгө шарт түзүп берген топ.         </p>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <p>
+            Клубдун ар бир мүчөсү тажрыйбаны өздөштүрүп, өзүнүн кейстери жана компетенциялары менен бөлүшүп гана койбостон, Клубдун башка мүчөлөрүнүн өнүгүүсүнө да салым кошо алат.      </p>
+          <p>
+            Ишкерлер клубунун бардык мүчөлөрү репутациясы жогору болгон ишкерлер жана топ-менеджерлер.          </p>
+        </div>
+      </div>
+      <div class="row display-flex">
+        <div class="col-xs-12 col-md-6 col-md-push-6">
+          <br>
+          <p class="h5">
+            Биздин өзгөчөлүк эмнеде ?          </p>
+          <ul class="list list-check">
+            <li>
+              Ишкерлер инвесторлорду таба алат.            </li>
+            <li>
+              Бизнесин кеңейтүү үчүн кеңешчи таба алат .            </li>
+            <li>
+              өнүгүү чөйрөсүнө кошулат             </li>
+
+
+          </ul>
+          <p>
+            Сизди ишкерлер клубунда көргүбүз келет          </p>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <p class="h5">
+                <span class="text-small">Урматтоо менен</span>
+                <br>
+                Мыктыбек Арстанбек              </p>
+            </div>
+<!--            <div class="col-xs-8 col-sm-5 col-sm-offset-1">-->
+<!--              <div class="club-mission-sign">-->
+<!--                <img src="" class="img-responsive" alt="speaker-sign"/>              </div>-->
+<!--            </div>-->
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-md-pull-6">
+          <div class="club-mission-img">
+            <img src="{% static 'img/sqs.jpg' %}" alt="speaker"/>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="club-benefits block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <p class="block-title h2">
+          Ишкердик клубдун мүмкүнчүлүктөрү        </p>
+        <p class="block-subtitle">
+          Ар түрдүү форматтагы иш - чараларга катышып, пикирлеш бизнесмендерди табыңыз       </p>
+      </div>
+    </div>
+    <div class="row display-flex">
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">01.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/lecture.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Ишкерлер үчүн тренингдерди көрүү мүмкүнчүлүгү           </div>
+            <div class="benefit-subtitle">
+                         </div>
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-1" class="btn btn-outline-primary" data-toggle="modal">
+                Толугураак              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">02.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/online-learning.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Мыктыбек Арстанбек менен жолугушуу           </div>
+            <div class="benefit-subtitle">
+                          </div>
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-2" class="btn btn-outline-primary" data-toggle="modal">
+                Толугураак              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">03.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/video.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Бетме-бет  көрүшүү          </div>
+            <div class="benefit-subtitle">
+                        </div>
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-3" class="btn btn-outline-primary" data-toggle="modal">
+                Толугураак              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">04.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/conversation-1.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Талкуу сессиялары             </div>
+            <div class="benefit-subtitle">
+                        </div>
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-4" class="btn btn-outline-primary" data-toggle="modal">
+                Толугураак             </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">05.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/idea.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Таанышуу            </div>
+            <div class="benefit-subtitle">
+              ИШКЕРЛЕР ПЛАТФОРМАСЫ             </div>
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-5" class="btn btn-outline-primary" data-toggle="modal">
+                Толугураак              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">06.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/presentation.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Ишкерлер форуму           </div>
+            <div class="benefit-subtitle">
+                        </div>
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-6" class="btn btn-outline-primary" data-toggle="modal">
+                Толугураак              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">07.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/qa.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Тармак жана өз ара жардам көрсөтүү үчүн жеке чаттар            </div>
+            <div class="benefit-subtitle"></div>
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-7" class="btn btn-outline-primary" data-toggle="modal">
+                Толугураак              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="benefit">
+          <div class="benefit-inner">
+            <div class="benefit-number">08.</div>
+            <div class="benefit-icon">
+              <img src="{% static 'img/icons/laugh.svg'%}" alt=""/>            </div>
+            <div class="benefit-title h4">
+              Баддинг системасы            </div>
+            <div class="benefit-subtitle"></p>
+
+            <div class="benefit-inner-footer">
+              <a href="#modal-benefit-8" class="btn btn-outline-primary" data-toggle="modal">
+                Подробнее              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="club-how-to block">
+  <div class="container">
+    <p class="block-title h2 text-center">Клубга катталуу этаптары</p>
+    <div class="row display-flex center">
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="club-how-to-item" data-number="1">
+          <div class="club-how-to-item-icon">
+            <img src="{% static 'img/icons/contact-form.svg'%}" alt="club-how-to-item-icon"/>          </div>
+          <p class="h5 text-small">
+            Катышуу пакетин тандаңыз          </p>
+          <p class="text-small">
+            Өтүнмө тапшырыңыз жана менеджериңиз менен катышуу пакетин тандаңыз         </p>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="club-how-to-item" data-number="2">
+          <div class="club-how-to-item-icon">
+            <img src="{% static 'img/icons/debit-card.svg' %}" alt="club-how-to-item-icon"/>          </div>
+          <p class="h5 text-small">
+            Тандоодон өтүңүз        </p>
+          <p class="text-small">
+            Клубдун мүчөсү катары тандоо процессинен өтүңүз жана тандалган катышуу пакетин төлөңүз       </p>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="club-how-to-item" data-number="3">
+          <div class="club-how-to-item-icon">
+            <img src="{% static 'img/icons/checklist.svg' %}" alt="club-how-to-item-icon"/>          </div>
+          <p class="h5 text-small">
+            Катталуудан өтүү          </p>
+          <p class="text-small">
+            Катталуудан өтүп, анкетаны толтурасыз          </p>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="club-how-to-item" data-number="4">
+          <div class="club-how-to-item-icon">
+            <img src="{% static 'img/icons/coworking.svg'%}" alt="club-how-to-item-icon"/>          </div>
+          <p class="h5 text-small">
+           Клубдун процесине катышуу          </p>
+          <p class="text-small">
+            Клубдун бардык иш-чараларына жана чогулуштарына катышасыз          </p>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="club-how-to-item" data-number="5">
+          <div class="club-how-to-item-icon">
+            <img src="{% static 'img/icons/counting.svg'%}" alt="club-how-to-item-icon"/>          </div>
+          <p class="h5 text-small">
+            Сиздин клубга мүчөлүгүңүздү кабыл алабыз         </p>
+          <p class="text-small">
+                </p>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3">
+        <div class="club-how-to-item" data-number="6">
+          <div class="club-how-to-item-icon">
+            <img src="{% static 'img/icons/hired.svg'%}" alt="club-how-to-item-icon"/>          </div>
+          <p class="h5 text-small">
+            Клубдун толук мүчөсү болосуз          </p>
+          <p class="text-small">
+                     </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="packages" class="club-packages block">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <p class="block-title h2 text-center">
+            Катышуу тарифин тандаңыз         </p>
+          <p class="block-subtitle">
+            Ар бир тарифтин өзүнө жараша талаптары жана мүмкүнчүлүктөрү бар. Алардын ар бирин толук окуп чыгып, катталуу тарифин тандаңыз        </p>
+        </div>
+      </div>
+      <div class="row display-flex center">
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="package">
+                            <div class="package-title">Базалык пакет </div>
+              <div class="package-price">
+                <span>
+                  1 400,00 $                </span>
+                              </div>
+                              <p class="package-note">
+                  Жалаң жаңы семинарлар жана макалалар               </p>
+                            <div class="package-footer">
+                                  <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=1400&pg_currency=USD&pg_description=%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9+&pg_salt=hpYoHepk4tHcagKu&pg_language=ru&pg_sig=e01c16f25af91a073e812e4fbe31f587" class="btn btn-default-primary btn-lg btn-block">Сатып алуу</a>                                <a href="{% url 'support' %}" class="btn btn-link-dark btn-block">Кененирээк</a>              </div>
+            </div>
+          </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="package popular">
+                              <div class="package-flag">Сунуштайбыз</div>
+                            <div class="package-title">Бизнес - пакет</div>
+              <div class="package-price">
+                <span>
+                  2 400,00 $                </span>
+                              </div>
+                              <p class="package-note">
+                   Бардык семинарлар жана макалалар               </p>
+                            <div class="package-footer">
+                                  <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=2400&pg_currency=USD&pg_description=%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81&pg_salt=imCPX4ETgaWmFoeW&pg_language=ru&pg_sig=d82f1597a53efc00899395f1bffb7f87" class="btn btn-default-primary btn-lg btn-block">Сатып алуу</a>                                <a href="{% url 'support' %}" class="btn btn-link-dark btn-block">Кененирээк</a>              </div>
+            </div>
+          </div>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="package">
+                            <div class="package-title">Премиум - пакет</div>
+              <div class="package-price">
+                <span>
+                  5 500,00 $                </span>
+                              </div>
+                              <p class="package-note">
+                  Бардык тренингдер, семинарлар жана макалалар                </p>
+                            <div class="package-footer">
+                                  <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=5500&pg_currency=USD&pg_description=premium&pg_salt=JwlQsAqLLWp94oz4&pg_language=ru&pg_sig=2f84db4efef768be8bb8763d884a0aff" class="btn btn-default-primary btn-lg btn-block">Сатып алуу</a>                                <a href="{% url 'support' %}" class="btn btn-link-dark btn-block">Кененирээк</a>              </div>
+            </div>
+          </div>
+              </div>
+
+                  </div>
+
+  </section>
+ <section class="checkout checkout-course block">
+		<div class="container">
+			<h1 class="block-title">Кененирээк маалымат алуу үчүн</h1>
+			<div class="row">
+				<div class="col-sm-6 col-sm-push-6 col-lg-5 col-lg-push-7">
+					<div class="checkout-course-form">
+						<p class="block-subtitle">
+              Адистен кеңеш алуу үчүн төмөнкү анкетаны толтуруңуз			</p>
+					  <form method="POST" accept-charset="utf-8" class="order-help-form" action="{% url 'packages1' %}">{% csrf_token %}{{ form.as_p }}<div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>                                    <div class="row form-row">
+                    <div class="row form-row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <div class="input checkbox"><input type="hidden" name="terms_agreement" value="0"/><label for="terms-agreement"><input type="checkbox" name="terms_agreement" value="1" checked="checked" id="terms-agreement"><span> <a href="{% url 'terms_of_service'%}" target="_blank">Мен тейлөө шарттарын окуп чыктым жана макулмун</a></span></label></div>                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="hidden" name="package_id" value="4"/>                      <input type="hidden" name="recaptcha_response" id="recaptchaResponse"/>                                            <button class="btn btn-primary btn-lg btn-block btn-submit" type="submit">Жөнөтүү</button>                    </div>
+                  </div>
+                  </form>  					<br/>
+						<p class="text-small text-muted">
+							Сиз менен биздин менеджер тез арада байланышат						</p>
+					</div>
+				</div>
+			</div>
+		 </div>
+		</div>
+	</section>
+<section class="faq block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-lg-2">
+        <div class="faq-help-block-description">
+          <p class="h2 block-title">Cуроолорго даяр жооптор</p>
+        </div>
+      </div>
+      <div class="col-sm-8 col-lg-8 col-lg-offset-2">
+        <div class="panel-group panel-group-bordered" id="faq-accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default active">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                   href="#faq-accordion-panel-1" aria-expanded="true"
+                   aria-controls="faq-accordion-panel-1">
+                  “Ишкердик академиясынын” платформасы деген эмне?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-1" class="panel-collapse collapse in" role="tabpanel"
+                 aria-labelledby="faq-accordion-panel-heading-1">
+              <div class="panel-body">
+                <p>
+                  “Ишкердик академиясынын” платформасы - бизнес жана жеке өнүгүү багытындагы Кыргызстанда биринчи болуп уюштурулган уникалдуу платформа. Мында сиз жеке жашооңузду жана бизнесиңизди тартипке алып, өнүктүрүүчү ар кандай тренингдерди, семинар жана макалаларды окуй аласыз.                 </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-2">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                   href="#faq-accordion-panel-2" aria-expanded="true"
+                   aria-controls="faq-accordion-panel-2">
+
+        Семинарларга катталуу менен тренингдерге каталуунун айырмасы эмнеде??                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-2" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="faq-accordion-panel-heading-2">
+              <div class="panel-body">
+                <p>
+                  Платформанын “Тренингдер” бөлүмүндө бир канча багытта тренинг жана курстар камтылган. Алардын ар бири бир канча бөлүмдөн жана этаптардан турат. Ар биринин мөөнөтү узак жана көлөмү да чоң болот.
+Ал эми семинарларда сиз тренерлердин кыскачам60 мүн. чейинки сабактарына күбө болосуз.                 </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                   href="#faq-accordion-panel-3" aria-expanded="true"
+                   aria-controls="faq-accordion-panel-3">
+                  Айлык жазылууда эмнеге “жаңы макалалар” категориясындагы маалыматтар гана ачылат?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-3" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="faq-accordion-panel-heading-3">
+              <div class="panel-body">
+                <ul>
+                  <li>
+                    Плафтормада бизде улам-улам жаңы макалалар жарыяланып турат. Мурдагы макалалар менен аралашып кетпөөсү жана мурдагы маалыматтарды аткарып, улам жаңы жарыяларга өтүүңүз үчүн “жаңы” деген белгиси бар макалалар гана көрүнүп турат.               </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-4">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                   href="#faq-accordion-panel-4" aria-expanded="true"
+                   aria-controls="faq-accordion-panel-4">
+                  Айлык пакетке жазылып койгон болсом, жылдык жазылууга өтө аламынбы?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-4" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="faq-accordion-panel-heading-4">
+              <div class="panel-body">
+                <p>
+                  Ооба өтө аласыз. Ал үчүн сиз “айлык” пакет менен “жылдык” пакеттин төлөмүндөгү айырмачылыкты төлөсөңүз жетиштүү. Сиз жылдык пакетке өтүү менен “тренингдер” бөлүмүндөгү бардык курстарга мүмкүнчүлүк аласыз.               </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-5">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                   href="#faq-accordion-panel-5" aria-expanded="true"
+                   aria-controls="faq-accordion-panel-5">
+                 Платформанын бардык тренингдерин көрүү мүмкүнчүлүгүн кантип алсам болот?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-5" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="faq-accordion-panel-heading-5">
+              <div class="panel-body">
+                <p>
+                  Ал үчүн сиз “жылдык +” пакетине катталышыңыз керек. Ал тарифте сиз учурдагы бардык тренингдерге эле эмес, келечектеги жарыя кылынчу курстарга да мүмкүнчүлүк аласыз.             </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-6">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                   href="#faq-accordion-panel-6" aria-expanded="true"
+                   aria-controls="faq-accordion-panel-6">
+                 Платформага айлык/жылдык жазылуу учурдагы айдын/жылдын аягына чейин гана жарамдуубу?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-6" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="faq-accordion-panel-heading-6">
+              <div class="panel-body">
+                <p>
+                  Кайсы тарифке качан катталган болсоңуз, ошол датадан тартып туура бир ай/жыл эсептелет.                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-7">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion"
+                   href="#faq-accordion-panel-7" aria-expanded="true"
+                   aria-controls="faq-accordion-panel-7">
+                  Акчамды кайтарып алсам болобу?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-7" class="panel-collapse collapse" role="tabpanel"
+                 aria-labelledby="faq-accordion-panel-heading-7">
+              <div class="panel-body">
+                <p>
+                  Төлөмдү толугу менен “иш алып баруу келишимине” ылайык аткарган болсоңуз, сиздин арызыңыз 14 күндүн ичинде каралат жана ага тиешелүү чечим кылынат.               </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Club modals-->
+<div class="modal fade" id="modal-benefit-1" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Ишкерлер үчүн тренингдердин бардык материалдарын көрүү мүмкүнчүлүгү</p>
+      </div>
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-2" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Мыктыбек Арстанбек менен жолугушуу</p>
+      </div>
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-3" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Спикерлер менен бетме-бет  көрүшүү </p>
+      </div>
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-4" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Оффлайн жолугушуу сиздин шаарыңызда</p>
+      </div>
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-5" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Таанышуу</p>
+      </div>
+      <div class="modal-body">
+        <p>
+          Ай сайын клубдун мүчөлөрүнүн онлайн жолугушуулары, конкреттүү иштердин деталдуу анализи жана Клуб мүчөлөрүнүн суроолору       </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-6" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Ишкерлер форуму</p>
+      </div>
+      <div class="modal-body">
+        <p>
+          Кайдзен клубуна кошулган ар бир катышуучу өз ордунда өнөктөштөрдү жана насаатчыларды табуу мүмкүнчүлүгүнө ээ. Өзүңүздүн чөйрөңүздө тажрыйба, кейстер жана компетенциялар менен алмашуу. Бул долбоорлорду иштеп чыгууда жана масштабдоодо сезилерлик натыйжаларды берет.   </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-7" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Тармак жана өз ара жардам көрсөтүү үчүн жеке чаттар</p>
+      </div>
+      <div class="modal-body">
+        <p>Ишкерлер клубунун мүчөлөрү Мыктыбек Арстанбек менен Telegram чатына, ошондой эле жабык эксперттик чаттарга кирүү мүмкүнчүлүгүнө ээ болушат, бул алардын суроо-талаптарына жоопторду жана чындап керектүү жана баалуу маалыматтарды алууну кыйла тездетет</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-benefit-8" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="modal-title h4">Баддинг системасы</p>
+      </div>
+      <div class="modal-body">
+        <p>Buddy системасы максаттарга (жеке же корпоративдик), ошондой эле жаңы көндүмдөрдү алууда колдоо көрсөтөт. Бул система Ишкердик платформасында окуунун жана Ишкерлер клубунун бардык жолугушууларына жана программаларына катышуунун эффективдүүлүгүн бир топ жогорулатат. Бадди - бул катышуучуга оор кырдаалдарда жардам берген жана ага моралдык колдоо көрсөткөн жакын дос. Ишкерлер клубунун бизнес консьерждери сизге досуңузду тандоого жана өз ара өсүү жана колдоо үчүн үзгүлтүксүз онлайн жолугушууларды пландаштырууга жардам берет.     </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End club modals-->
+    {% endblock %}

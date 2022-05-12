@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg">
+	
+<section class="home-preview block">
+  <div class="container">
+    <div class="text-center">
+        <p class="block-title h1">Ишкердик Академия</p>
+      <p class="block-suptitle">БИЛИМ БЕРҮҮ ПЛАТФОРМАСЫ</p>
+
+        {% if not request.user.is_authenticated and user.is_staff  %}
+
+              <a href="{% url 'support' %}" class="btn btn-primary btn-lg scroll">
+           Адистен кеңеш алуу      </a>
+        <a href="{% url 'login' %}" class="btn btn-outline-default btn-lg">Кирүү</a>          </div>
+  </div>
+
+
+    {% endif %}
+  <div class="home-preview-bg">
+    <img src="{% static 'img/logoproz.png' %}" alt="preview-img"/>  </div>
+</section>
+  <section class="home-feed block">
+    <div class="container">
+
+            <div class="row masonry-grid">
+              {% for i in makala %}
+                  <div class="col-xs-12 col-sm-6 masonry-grid-item">
+
+
+            <a href="{% url 'categories' i.id  %}"
+               class="post-thumbnail boxed
+               with-flag               with-speaker">
+                              <div class="post-thumbnail-flag">
+                                      {{ i.type }}                                  </div>
+                                          <div class="post-thumbnail-body">
+                <div class="post-metadata">
+                  <div class="post-metadata-item post-type article">Макала</div>
+                                  </div>
+                                              <div id="veve">
+                <p class="post-thumbnail-title h4"> {{ i.title }} </p>
+                <p class="post-thumbnail-subtitle">
+                  {{ i.description }}               </p>
+                <div class="post-metadata">
+                  <div class="post-metadata-item">
+                    {{ i.date }}                  </div>
+                                      <div class="post-metadata-item">
+
+                                         </div>
+                                  </div>
+              </div>
+                                              </div>
+                              <div class="post-thumbnail-footer">
+                                      <div class="post-speaker">
+                      <div class="post-speaker-img">
+                                                  <img src="{% static 'img/logored.png' %}" alt=""/>                                              </div>
+                      <div class="post-speaker-body">
+                        <p class="post-speaker-title">
+                          "Ишкердик академиясынын" командасы                        </p>
+                        <p class="post-speaker-subtitle">
+                          iakademy.com                        </p>
+                      </div>
+
+
+                    </div>
+
+                                    </div>
+
+                          </a>
+
+          </div>
+              {% endfor %}
+
+            </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+        <div class="text-center">
+                                      <a href="{% url 'library' %}" class="btn btn-outline-primary">Кененирээк</a>          				</div>
+
+<section id="packages" class="home-packages block">
+        <div class="container">
+            <div class="package package-compact">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="package-title">
+                            Сатып алуу 19,00 $ / айына
+                        </div>
+                        <div class="package-body">
+                            <p class="text-large">
+                                Ишкердик академиясынын семинарларына мүмкүнчүлүк алуу </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-md-4 col-md-offset-1">
+                        <a href="{% url 'payments_month' %}" class="btn btn-primary btn-lg btn-block">Сатып алуу</a>
+                        <a href="{% url 'support' %}" class="btn btn-link-dark btn-block">Адистен кеңеш алуу</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="faq block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-lg-2">
+        <div class="faq-help-block-description">
+          <p class="h2 block-title">Cуроолорго даяр жооптор</p>
+        </div>
+      </div>
+      <div class="col-sm-8 col-lg-8 col-lg-offset-2">
+        <div class="panel-group panel-group-bordered" id="faq-accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default active">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-5">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-5" aria-expanded="true" aria-controls="faq-accordion-panel-5">
+                  "Ишкердик aкадемиясынын" платформасы деген эмне?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-5">
+              <div class="panel-body">
+                <p>
+                  “Ишкердик академиясынын” платформасы - бизнес жана жеке өнүгүү багытындагы Кыргызстанда биринчи болуп уюштурулган уникалдуу платформа. Мында сиз жеке жашооңузду жана бизнесиңизди тартипке алып, өнүктүрүүчү ар кандай тренингдерди, семинар жана макалаларды окуй аласыз.                 </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-1" aria-expanded="true" aria-controls="faq-accordion-panel-1">
+
+Семинарларга катталуу менен тренингдерге каталуунун айырмасы эмнеде?                  </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-1">
+              <div class="panel-body">
+                <p>
+                  Платформанын “Тренингдер” бөлүмүндө бир канча багытта тренинг жана курстар камтылган. Алардын ар бири бир канча бөлүмдөн жана этаптардан турат. Ар биринин мөөнөтү узак жана көлөмү да чоң болот.
+Ал эми семинарларда сиз тренерлердин кыскачам60 мүн. чейинки сабактарына күбө болосуз.              </p>
+
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-2">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-2" aria-expanded="true" aria-controls="faq-accordion-panel-2">
+                  Айлык жазылууда эмнеге “жаңы макалалар” категориясындагы маалыматтар гана ачылат?              </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-2">
+              <div class="panel-body">
+                <p>
+                                    Плафтормада бизде улам-улам жаңы макалалар жарыяланып турат. Мурдагы макалалар менен аралашып кетпөөсү жана мурдагы маалыматтарды аткарып, улам жаңы жарыяларга өтүүңүз үчүн “жаңы” деген белгиси бар макалалар гана көрүнүп турат.                              </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-3" aria-expanded="true" aria-controls="faq-accordion-panel-3">
+                  Айлык пакетке жазылып койгон болсом, жылдык жазылууга өтө аламынбы?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-3">
+              <div class="panel-body">
+                <p>
+                  Ооба өтө аласыз. Ал үчүн сиз “айлык” пакет менен “жылдык” пакеттин төлөмүндөгү айырмачылыкты төлөсөңүз жетиштүү. Сиз жылдык пакетке өтүү менен “тренингдер” бөлүмүндөгү бардык курстарга мүмкүнчүлүк аласыз.                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-4">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-4" aria-expanded="true" aria-controls="faq-accordion-panel-4">
+                  Платформанын бардык тренингдерин көрүү мүмкүнчүлүгүн кантип алсам болот??                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-4">
+              <div class="panel-body">
+                <p>
+                  Ал үчүн сиз “жылдык +” пакетине катталышыңыз керек. Ал тарифте сиз учурдагы бардык тренингдерге эле эмес, келечектеги жарыя кылынчу курстарга да мүмкүнчүлүк аласыз.     </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-6">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-6" aria-expanded="true" aria-controls="faq-accordion-panel-6">
+                  Платформага айлык/жылдык жазылуу учурдагы айдын/жылдын аягына чейин гана жарамдуубу?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-6">
+              <div class="panel-body">
+                <p>
+                    Кайсы тарифке качан катталган болсоңуз, ошол датадан тартып туура бир ай/жыл эсептелет.  </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-8">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-8" aria-expanded="true" aria-controls="faq-accordion-panel-8">
+                  Онлайн окуса болобу?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-8">
+              <div class="panel-body">
+                <p>
+                 Ооба биздин окуу платформабызда онлайн жана оффлайн форматта окусаңыз болот                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-9">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-9" aria-expanded="true" aria-controls="faq-accordion-panel-9">
+                    Акчамды кайтарып алсам болобу? ?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-9">
+              <div class="panel-body">
+                <p>
+                  Төлөмдү толугу менен “иш алып баруу келишимине” ылайык аткарган болсоңуз, сиздин арызыңыз 14 күндүн ичинде каралат жана ага тиешелүү чечим кылынат              </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-10">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-10" aria-expanded="true" aria-controls="faq-accordion-panel-10">
+                Жаңы жашоо тренинги жөнүндө маалымат</a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-10">
+              <div class="panel-body">
+                <p>
+                  Тренингди толук көрүү үчүн адистен кеңеш алуу баскычын басыңыз же сатып алуу кнопкасын басыңыз                              </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-11">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-11" aria-expanded="true" aria-controls="faq-accordion-panel-11">
+                  Ишкердик академия Бишкекте эле барбы ?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-11">
+              <div class="panel-body">
+                <p>
+                  Ишкердик академия Бишкекте, Ошто, Москвада бар, ошондой эле сиз окууну онлайн улантсаңыз  болот                </p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="faq-accordion-panel-heading-7">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="kaizen-school.html#faq-accordion-panel-7" aria-expanded="true" aria-controls="faq-accordion-panel-7">
+                  БИЗНЕС НӨЛДӨН деген эмне?                </a>
+              </h4>
+            </div>
+            <div id="faq-accordion-panel-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-accordion-panel-heading-7">
+              <div class="panel-body">
+                <p>
+                  БИЗНЕС НӨЛДӨН бул 2-айлык тренинг бул тренингте сиз - бизнесиңизди    НӨЛДӨН баштайсыз
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+	{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg">
+
+    <div class="page">
+        <div class="container">
+
+            <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/"
+                                                                                                  itemprop="item"><i
+                        class="far fa-home"></i></a>
+                    <meta itemprop="name" content="Главная">
+                    <meta itemprop="position" content="1">
+                </li>
+                <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>Бардык макалалар</span>
+                    <meta itemprop="name" content="Все материалы">
+                    <meta itemprop="position" content="2">
+                </li>
+            </ul>
+        </div>
+        <section class="block">
+            <div class="container">
+
+                <h1 class="block-title">Бардык материалдар</h1>
+                <div class="row masonry-grid">
+                    {% for i in makala %}
+                    <div class="col-xs-12 col-sm-6 col-md-4 masonry-grid-item">
+                        <a href="{% url 'categories' i.id  %}"
+                           class="post-thumbnail boxed
+                 with-flag                 with-speaker">
+                            <div class="post-thumbnail-flag">
+                                {{ i.type }}
+                            </div>
+                            <div class="post-thumbnail-body">
+                                <div class="post-metadata">
+                                    <div class="post-metadata-item post-type article">Макала</div>
+                                </div>
+                                <p class="post-thumbnail-title text-large">{{ i.title }}</p>
+                                <p class="post-thumbnail-subtitle">
+                                    {{ i.description }} </p>
+                                <div class="post-metadata">
+                                    <div class="post-metadata-item">
+                                        20 апр. 2022
+                                    </div>
+                                    <div class="post-metadata-item">
+                                        &asymp;
+                                        8 мин.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-thumbnail-footer">
+                                <div class="post-speaker">
+                                    <div class="post-speaker-img">
+                                        <img src="https://storage.googleapis.com/margulan-storage/sm_9a423337041fd346b1f2d35e00a62b03.PNG"
+                                             alt=""/></div>
+                                    <div class="post-speaker-body">
+                                        <p class="post-speaker-title">
+                                            Ишкердик академия </p>
+                                        <p class="post-speaker-subtitle">
+                                            iakademiasy@gmail.com </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+            </a>
+
+    </div>
+
+</div>
+
+
+</section>
+</div>
+{% endblock %}

@@ -1,0 +1,523 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="wrapper ">
+
+  <div class="page course">
+    <div class="container">
+            <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><i class="far fa-home"></i></a><meta itemprop="name" content="Главная"><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{% url 'lenta' %}" itemprop="item">Макала</a><meta itemprop="name" content="Кайдзен школа"><meta itemprop="position" content="2"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{% url 'iacademy' %}" itemprop="item">Тренингдер</a><meta itemprop="name" content="Курсы"><meta itemprop="position" content="3"></li><li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>{{ i.title_name }}</span><meta itemprop="name" content="Антикризисный буткемп"><meta itemprop="position" content="4"></li></ul>    </div>
+    <section class="course-preview block">
+      <div class="container">
+        <div class="row">
+            {% for i in buissines %}
+          <div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
+            <div class="post-metadata">
+              <div class="post-type course">Тренинг</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-5">
+            <h1 class="course-preview-title">{{ i.title_name }}</h1>
+            <p>{{ i.description_title_name }}</p>
+            <div class="page-header-btns">
+
+            <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=35000&pg_currency=KGS&pg_description=%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81+%D0%BD%D0%BE%D0%BB%D0%B4%D0%BE%D0%BD&pg_salt=nQXKQ0VNXuQJRkz5&pg_language=ru&pg_sig=3722c87dd7f781aaf8b323d4de7acb6f" class="btn btn-primary ">Тренингди саты алуу</a>
+  <p class="text-muted text-small">
+    Стандарттык баасы: 35 000 сом  </p>
+</div>
+          </div>
+          <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-offset-1 hidden-xs">
+                          <p>
+                <strong>Формат</strong>
+              </p>
+              <p>
+                <strong>{{ i.format_trainings }}</strong>
+              </p>
+                        <div class="row display-flex">
+                                            <div class="col-xs-6 col-sm-4">
+                  <div class="course-preview-benefit">
+                    <p>
+                      <strong>Тренингде</strong>
+                    </p>
+                    <p>
+                                                                    {{ i.count_lesson }}
+                        <br/>
+                                          </p>
+                  </div>
+                </div>
+                                            <div class="col-xs-6 col-sm-4">
+                  <div class="course-preview-benefit">
+                    <p>
+                      <strong>Узактыгы</strong>
+                    </p>
+                    <p>
+                                              {{ i.time }}<br/>
+                                          </p>
+                  </div>
+                </div>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">
+    </script>
+                      </div>
+        </div>
+      </section>
+        <section id="about-course" class="course-about block">
+      <div class="container">
+          <div class="embed-responsive embed-responsive-16by9 post-cover">
+            <div class="embed-responsive-item">
+            <video width="760" height="540" controls autoplay>
+                          <source src="{{ i.video.url }}" type="video/mp4"> </source>
+                        </video>
+            </div>
+            </div>
+        <p class="block-suptitle">ЭМНЕ, КАНТИП, ЭМНЕГЕ?</p>
+        <p class="block-title h1">
+          ТРЕНИНГ ТУУРАЛУУ       </p>
+        <div class="row">
+          <div class="col-sm-8">
+                          <div class="post-about">
+                <p>{{ i.about_course }}</p><p><br>{{ i.about_course2 }}</p><p><br>{{ i.about_course3 }}</p><p><br></p><p><b>Тренинг кимдер үчүн :</b></p><ul><li>{{ i.for_who }}</li><li>{{ i.for_who2 }}</li><li>{{ i.for_who3 }}</li></ul><p><br><b>Сиздерге</b></p><ul><li>{{ i.will_know }}</li><li>{{ i.will_know2 }}</li><li>{{ i.will_know3 }}</li></ul><p><b>Натыйжада, сиз үйрөнүүчү материалдар:</b></p><ul><li>{{ i.result_you }}</li><li>{{ i.result_you2 }}</li><li>{{ i.result_you3 }}</li><li>{{ i.result_you4 }}</li><li>{{ i.result_you5 }}</li></ul><p><br></p><p style="text-align: left;"><b><br></b></p><p><div style="text-align: left;">
+
+
+                                      <div class="post-about">
+
+            <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=35000&pg_currency=KGS&pg_description=%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81+%D0%BD%D0%BE%D0%BB%D0%B4%D0%BE%D0%BD&pg_salt=nQXKQ0VNXuQJRkz5&pg_language=ru&pg_sig=3722c87dd7f781aaf8b323d4de7acb6f" class="btn btn-primary ">Тренингди сатып алуу</a>                                                        <a href="#course-program" class="btn btn-outline-primary scroll">
+                    Программаны көрүү                  </a>
+                              </div>
+                      </div>
+          <div class="col-sm-4 col-lg-3 col-lg-offset-1">
+                                      <div class="course-about-info">
+                <p class="course-about-info-title">Формат:</p>
+                <p class="course-about-info-subtitle">
+                  {{ i.format_trainings }}               </p>
+              </div>
+                        <div class="row">
+                              <div class="col-xs-6 col-sm-12">
+                  <div class="course-about-info">
+                    <p
+                      class="course-about-info-title">
+                      Тренингде:                    </p>
+                    <p class="course-about-info-subtitle">
+                                                                    {{ i.count_lesson }}
+                        <br/>
+                                          </p>
+                  </div>
+                </div>
+                                            <div class="col-xs-6 col-sm-12">
+                  <div class="course-about-info">
+                    <p class="course-about-info-title">Узактыгы:</p>
+                    <p class="course-about-info-subtitle">
+                      {{ i.time }}                    </p>
+                  </div>
+                </div>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+          <section id="course-program" class="course-program block">
+        <div class="container">
+          <p class="block-title h1">
+          Тренингдин программасы</p>
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+              <div class="panel-group" id="course-program-accordion" role="tablist" aria-multiselectable="true">
+                                                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="course-program-accordion-panel-heading-1">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#course-program-accordion"
+                           href="#course-program-accordion-panel-1" aria-expanded="true"
+                           aria-controls="course-program-accordion-panel-1">
+                          <div class="panel-title-module">
+                            1 - Модуль                           </div>
+                          <div class="panel-title-inner">
+                            {{ i.block_question }}                           <div class="panel-title-inner-meta">
+                                                              <span>
+                                {{ i.data_block1 }}                             </span>
+                                                          </div>
+                          </div>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="course-program-accordion-panel-1" class="panel-collapse collapse"
+                         role="tabpanel" aria-labelledby="course-program-accordion-panel-heading-1">
+                      <div class="panel-body">
+                        <p>{{ i.description_block1 }}<br />
+{{ i.description_block2 }}<br />
+{{ i.description_block3 }}<br />
+{{ i.description_block4 }}<br />
+{{ i.description_block5 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                                                    <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="course-program-accordion-panel-heading-2">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#course-program-accordion"
+                           href="#course-program-accordion-panel-2" aria-expanded="true"
+                           aria-controls="course-program-accordion-panel-2">
+                          <div class="panel-title-module">
+                            2 - Модуль                           </div>
+                          <div class="panel-title-inner">
+                            {{ i.block_question }}                             <div class="panel-title-inner-meta">
+                                                              <span>
+                                {{ i.data_block2 }}                             </span>
+                                                          </div>
+                          </div>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="course-program-accordion-panel-2" class="panel-collapse collapse"
+                         role="tabpanel" aria-labelledby="course-program-accordion-panel-heading-2">
+                      <div class="panel-body">
+                        <p>{{ i.description_block21 }}<br />
+{{ i.description_block22 }}<br />
+{{ i.description_block23 }}<br />
+{{ i.description_block24 }}<br />
+{{ i.description_block25 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                                                    <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="course-program-accordion-panel-heading-3">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#course-program-accordion"
+                           href="#course-program-accordion-panel-3" aria-expanded="true"
+                           aria-controls="course-program-accordion-panel-3">
+                          <div class="panel-title-module">
+                            3 - Модуль                           </div>
+                          <div class="panel-title-inner">
+                            {{ i.block_question3 }}                             <div class="panel-title-inner-meta">
+                                                              <span>
+                                {{ i.data_block3 }}                             </span>
+                                                          </div>
+                          </div>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="course-program-accordion-panel-3" class="panel-collapse collapse"
+                         role="tabpanel" aria-labelledby="course-program-accordion-panel-heading-3">
+                      <div class="panel-body">
+                        <p>{{ i.description_block31 }}<br />
+{{ i.description_block32 }}<br />
+{{ i.description_block33 }}<br />
+{{ i.description_block34 }}<br />
+{{ i.description_block35 }}</p>
+                      </div>
+                    </div>
+                  </div>
+                                                </div>
+                              <div class="post-about">
+
+            <a href="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=35000&pg_currency=KGS&pg_description=%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81+%D0%BD%D0%BE%D0%BB%D0%B4%D0%BE%D0%BD&pg_salt=nQXKQ0VNXuQJRkz5&pg_language=ru&pg_sig=3722c87dd7f781aaf8b323d4de7acb6f" class="btn btn-primary ">Тренингди сатып алуу</a>                                                              <a href="#course-results" class="btn btn-outline-primary scroll">
+                      Тренингде эмнени үйрөнөм?                    </a>
+                                  </div>
+                          </div>
+          </div>
+        </div>
+      </section>
+        <section class="course-benefits block">
+      <div class="container">
+        <div class="row">
+                      <div class="col-sm-4">
+              <div class="benefit">
+                <div class="benefit-icon">
+                  <img src="{% static '/img/icons/video.svg'%}" alt=""/>                </div>
+                <div class="benefit-title h5">
+                  {{ i.count_lesson }}
+                </div>
+                <div class="benefit-subtitle">
+                  Сизге эң зарыл маалыматтарды камтыйт. Аларды алгачкылардан болуп үйрөнүңүз.             </div>
+              </div>
+            </div>
+                                <div class="col-sm-4">
+              <div class="benefit">
+                <div class="benefit-icon">
+                  <img src="{% static 'img/icons/laurel.svg'%}" alt=""/>                </div>
+                <div class="benefit-title h5">100% реалдуу</div>
+                <div class="benefit-subtitle">
+                  Жашооңузда толуккандуу колдоно ала турган реалдуу инструменттер                </div>
+              </div>
+            </div>
+                    <div class="col-sm-4">
+            <div class="benefit">
+              <div class="benefit-icon">
+                <img src="{% static 'img/icons/laptop.svg'%}" alt=""/>              </div>
+              <div class="benefit-title h5">Каалаган убакта, каалаган жерде</div>
+              <div class="benefit-subtitle">
+                Сизге ыңгайлуу абалда телефонуңуздан же компьютериңизден көрүңүз             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+          <div id="course-results" class="course-results block">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5">
+              <p class="block-title h1">Тренингде үйрөнүүчү материалдар</p>
+            </div>
+            <div class="col-sm-7 col-md-6 col-md-offset-1">
+              <div class="post-benefits">
+                <p>·       {{ i.what_give_course1 }}<br />
+·       {{ i.what_give_course2 }}<br />
+·       {{ i.what_give_course3 }}<br />
+·       {{ i.what_give_course4 }}<br />
+·       {{ i.what_give_course5 }}<br />
+·       {{ i.what_give_course6 }}<br />
+·       {{ i.what_give_course7 }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+              <section class="course-speakers block">
+        <div class="container">
+                      <div class="course-speaker">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="course-speaker-img">
+                                          <img src="{{ i.photo.url }}" alt="speaker-img"/>                                      </div>
+                </div>
+                <div class="col-sm-6">
+                  <p class="block-suptitle">
+                    Тренер тууралуу                  </p>
+                  <p class="block-title h1">
+                    {{ i.name_mentor }}                  </p>
+                  <p class="block-subtitle">
+                    {{ i.description_mentor }}                 </p>
+                  <div class="course-speaker-bio">
+                    <p> {{ i.description_mentor21 }}  </p>
+<p> {{ i.description_mentor22 }}  </p>
+<p> {{ i.description_mentor23 }}  </p>
+<p> {{ i.description_mentor24 }} </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+                  </div>
+      </section>
+              <section class="course-process block">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-lg-6">
+              <p class="block-title h1">
+                Окутуу кандай жүрөт              </p>
+              <p class="block-subtitle">
+                Тренинг 3 сааттан турат. Ар бир этабына токтолуп, тапшырмаларды так аткарыңыз            </p>
+            </div>
+          </div>
+          <div class="row display-flex">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="course-process-item">
+                <p class="course-process-item-number">1</p>
+                <p class="course-process-item-title h5">
+                  Тренинг                </p>
+                <p>
+                  Сизге тренингдин бардык маалыматтарын колдонуу мүмкүнчүлүгү берилет                </p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="course-process-item">
+                <p class="course-process-item-number">2</p>
+                <p class="course-process-item-title h5">
+                  Өзүңүз тартиптеңиз                </p>
+                <p>
+                    Тренингди 24/7 көрө аласыз             </p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="course-process-item">
+                <p class="course-process-item-number">3</p>
+                <p class="course-process-item-title h5">
+                  Байланыш куруу                </p>
+                <p>
+                  Семинарга катталгандар менен комментарийлер аркылуу пикир алмаша аласыз               </p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="course-process-item">
+                <p class="course-process-item-number">4</p>
+                <p class="course-process-item-title h5">
+                  Сабактарды көрүү мүмкүнчүлүгү                </p>
+                <p>
+                                      Биз сизге сатып алган курстарыңызды толугу менен көрө аласыз                                  </p>
+              </div>
+            </div>
+              {% endfor %}
+          </div>
+        </div>
+      </section>
+<section class="testimonials block">
+  <div class="container">
+    <p class="block-title h2 text-center">Тренерлер</p>
+    <br>
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <div class="slick-slider-wrapper">
+          <div class="school-testimonials-slider slick-slider slick-adaptive-height">
+            <div>
+              <div class="testimonial">
+                <div class="testimonial-inner">
+                  <p>
+                    <em>
+                      «ЖАҢЫ ЖАШОО», «СЕКИРИК»   ТРЕНИНГДЕРИНИН АВТОРУ, ТРЕНЕРИ
+                    </em>
+                  </p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="post-speaker">
+                        <p class="post-speaker-title">
+                          Эрболот Касымтегин                        </p>
+                        <p class="post-speaker-subtitle">
+                           ӨНҮГҮҮ ТРЕНЕРИ, ИШКЕР                       </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="testimonial">
+                <div class="testimonial-inner">
+                  <p>
+                    <em>
+                      "АКЧА САРПТОО", "ЖИГИТ ТРЕНД" ТРЕНИНГДЕРИНИН АВТОРУ
+                    </em>
+                  </p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="post-speaker">
+                        <p class="post-speaker-title">
+                          Марат Күркүрөө                        </p>
+                        <p class="post-speaker-subtitle">
+                          ТРЕНЕР, ИШКЕР                       </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="testimonial">
+                <div class="testimonial-inner">
+                  <p>
+                    <em>
+                      «СҮРДҮ ЖЕҢҮҮ», «YOUTUBE ДАН  АКЧА ТАБУУ», «ТЕЗ ВИДЕО» , «ТЕЗ ФОТО»  ТРЕНИНГДЕРИНИН  ТҮЗҮҮЧҮСҮ ЖАНА ТРЕНЕРИ       </em>
+                  </p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="post-speaker">
+                        <p class="post-speaker-title">
+                          Акжолтой  Аскар                       </p>
+                        <p class="post-speaker-subtitle">
+                          ТЕЛЕЖУРНАЛИСТ, БЛОГЕР, ӨНҮГҮҮ ТРЕНЕРИ                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="testimonial">
+                <div class="testimonial-inner">
+                  <p>
+                    <em>
+                      «БИЗНЕС НӨЛДӨН» ОНЛАЙН ТРЕНИНГИНИН ТРЕНЕРИ                   </em>
+                  </p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="post-speaker">
+                        <p class="post-speaker-title">
+                          Темирлан    Боронбай                    </p>
+                        <p class="post-speaker-subtitle">
+                          КОУЧ-ТРЕНЕР                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="testimonial">
+                <div class="testimonial-inner">
+                  <p>
+                    <em>
+                      «БИЗНЕС НӨЛДӨН» ОНЛАЙН ТРЕНИНГИНИН ПРОДЮСЕРИ                 </em>
+                  </p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="post-speaker">
+                        <p class="post-speaker-title">
+                          Курманбек Жоошбаев                       </p>
+                        <p class="post-speaker-subtitle">
+                          ФИНАНСИСТ – АНАЛИТИК                       </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="testimonial">
+                <div class="testimonial-inner">
+                  <p>
+                    <em>
+                      “САТУУ ТЕХНИКАСЫ”  ТРЕНИНГИНИН ТРЕНЕРИ                 </em>
+                  </p>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="post-speaker">
+                        <p class="post-speaker-title">
+                          Адамбек Немат                        </p>
+                        <p class="post-speaker-subtitle">
+                           ЖЕКЕ ИШКЕР                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slick-slider-wrapper">
+          <div class="school-testimonials-avatars-slider slick-slider">
+            <div>
+              <div class="testimonial-avatar">
+                <img src="{% static 'img/08.png' %}" alt="Эрболот Касымтегин"/>              </div>
+            </div>
+            <div>
+              <div class="testimonial-avatar">
+                <img src="{% static 'img/51818.png' %}" alt="Марат Күркүрөө"/>              </div>
+            </div>
+            <div>
+              <div class="testimonial-avatar">
+                <img src="{% static 'img/45141.png' %}" alt="Акжолтой Аскар"/>              </div>
+            </div>
+            <div>
+              <div class="testimonial-avatar">
+                <img src="{% static 'img/5215.png' %}" alt="Темирлан Боронбай"/>              </div>
+            </div>
+            <div>
+              <div class="testimonial-avatar">
+                <img src="{% static 'img/img.png' %}" alt="Курманбек Жоошбаев"/>              </div>
+            </div>
+            <div>
+              <div class="testimonial-avatar">
+                <img src="{% static 'img/img_1.png' %}" alt="Адамбек Немат"/>              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

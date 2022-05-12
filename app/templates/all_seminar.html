@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg">
+
+<div class="page">
+	<div class="container">
+				<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><i class="far fa-home"></i></a><meta itemprop="name" content="Главная"><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="{% url 'iacademy' %}" itemprop="item">Тренингдер</a><meta itemprop="name" content="Кайдзен школа"><meta itemprop="position" content="2"></li><li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>Семинарлар</span><meta itemprop="name" content="Мастер-классы"><meta itemprop="position" content="3"></li></ul>	</div>
+	<section class="block">
+		<div class="container">
+			<h1 class="block-title">Семинарлар</h1>
+			        <div class="nav-wrapper ">
+  <ul class="nav nav-pills">
+    <li class="active">
+      <a href="">Баары</a>
+    </li>
+          <li class="">
+<!--        <a href="/classes/category/8">-->
+<!--          Развитие        </a>-->
+      </li>
+      </ul>
+</div>
+
+				<div class="row display-flex">
+                     {% for i in all_seminar %}
+                                  <div class="col-xs-12 col-sm-6 col-md-4">
+
+              <a href="{% url 'category' i.id  %}"
+                 class="post-thumbnail class-card
+                                             with-speaker">
+                                <div class="post-thumbnail-body">
+                  <div class="post-metadata">
+                                                                  <div class="post-metadata-item post-metadata-item-with-bg">
+                          {{ i.type }}                        </div>
+                                                                                      <div class="post-metadata-item">
+                                                  {{ i.count_lessons }}                                             </div>
+                                      </div>
+                  <p class="post-thumbnail-title text-large">{{ i.title }}</p>
+                  <p class="post-thumbnail-subtitle">{{ i.description }}</p>
+                </div>
+
+                                  <div class="post-thumbnail-footer">
+                                          <div class="post-speaker">
+                        <div class="post-speaker-img">
+                                                      <img src="{% static 'img/logored.png' %}" alt=""/>                                                  </div>
+                        <div class="post-speaker-body">
+                          <p class="post-speaker-title">
+                            Ишкердик академия                          </p>
+                          <p class="post-speaker-subtitle">
+                            Ишкердик академия окуу платформасы                         </p>
+                        </div>
+                      </div>
+
+                                        </div>
+
+                                              </a>
+
+
+            </div>
+                    {% endfor %}
+
+
+                </div>
+
+        </div>
+
+    </section>
+</div>
+
+
+
+
+</div>
+
+
+{% endblock %}

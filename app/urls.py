@@ -1,0 +1,35 @@
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+    path('', lenta, name='lenta'),
+    path('privacy-policy', privacy, name='privacy'),
+    path('iacademy', iacadem, name='iacademy'),
+    path('iacademyru', iacademru, name='iacademyru'),
+    path('payment_standart', payments_iclub, name='payment_standart'),
+    path('payment_buissines', payments_iclub2, name='payment_buissines'),
+    path('payment_premium', payments_iclub3, name='payment_premium'),
+    path('support', support, name='support'),
+    path('post1', post1, name='post1'),
+    path('all_courses', all_courses, name='all_courses'),
+    path('buissines0', buissines0, name='buissines0'),
+    path('buissines0ru', buissines0ru, name='buissines0ru'),
+    path('rus', rus, name='rus'),
+    path('terms_of_service', terms_of_service, name='terms_of_service'),
+    path('library', library, name='library'),
+    path('packages', packages, name='packages'),
+    path('packages1', packages1, name='packages1'),
+    path('payments_month', payments_month, name='payments_month'),
+    path('payments_years', payments_years, name='payments_years'),
+    path('payments_years_pluse', payments_years_pluse, name='payments_years_pluse'),
+    path('payments_iclub', payments_iclub, name='payments_iclub'),
+    path('payments_iclub2', payments_iclub2, name='payments_iclub2'),
+    path('payments_iclub3', payments_iclub3, name='payments_iclub3'),
+    path('categorys/<int:id>/', detail_trainings, name='categorys'),
+    path('all_seminars', all_seminar, name='all_seminars'),
+    path('buissines_trainings', buissines_trainings, name='buissines0_trainings'),
+    path('category/<int:id>/', category_detail_trainings, name='category'),
+    path('categories/<int:id>/', makala_detail, name='categories'),
+    path('reset-password', reset_password, name='reset'),
+
+]

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="wrapper ">
+
+    <script>
+	grecaptcha.ready(function () {
+		grecaptcha.execute('6LfG-64aAAAAANo58FvEJ4sHSkExUWPLqwc8KxhG', { action: 'purchase' }).then(function (token) {
+			var recaptchaResponse = document.getElementById('recaptchaResponse');
+			recaptchaResponse.value = token;
+		});
+	});
+
+    </script>
+
+    <div class="page">
+        <div class="container">
+            <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/"
+                                                                                                  itemprop="item"><i
+                        class="far fa-home"></i></a>
+                    <meta itemprop="name" content="Главная">
+                    <meta itemprop="position" content="1">
+                </li>
+                <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>Каттоодон өтүү</span>
+                    <meta itemprop="name" content="Оформить подписку">
+                    <meta itemprop="position" content="2">
+                </li>
+            </ul>
+        </div>
+        <section class="checkout block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+                        <p class="block-suptitle">Каттоодон өтүү</p>
+                        <h1 class="block-title">Ай</h1>
+                        <form method="post" accept-charset="utf-8" class="order-form"
+                              action="https://api.paybox.money/payment.php?pg_merchant_id=542306&pg_amount=20&pg_currency=USD&pg_description=%D0%BA%D1%83%D1%80%D1%81&pg_salt=X0F9VOv1IGxZGIpJ&pg_language=ru&pg_sig=893c14d61451047ba16d6a6bdbd09c37">
+                            <div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+                            <div class="input text required"><label for="name">Аты-жөнүңүз *</label><input type="text"
+                                                                                                           name="name"
+                                                                                                           class="form-control input-lg"
+                                                                                                           placeholder="Асан Асанов"
+                                                                                                           required="required"
+                                                                                                           maxlength="255"
+                                                                                                           id="name"/>
+                            </div>
+                            <div class="input text required"><label for="name">Тел-номериңиз *</label><input type="text"
+                                                                                                             name="name"
+                                                                                                             class="form-control input-lg"
+                                                                                                             placeholder="+996 000 000 000"
+                                                                                                             required="required"
+                                                                                                             maxlength="255"
+                                                                                                             id="tel"/>
+                            </div>
+                            <div class="input email required"><label for="email">E-mail почтаңыз *</label><input
+                                    type="email" name="email" class="form-control input-lg" placeholder="asan@mail.com"
+                                    required="required" maxlength="255" id="email"/></div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg">
+
+                                    </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="payment-system-id"></label>
+                                <div class="row form-row display-flex">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label class="radio" for="payment-system-id-1">
+                                            <input type="radio" id="payment-system-id-1" value="1"
+                                                   name="payment_system_id" class="radio-outline" checked>
+                                            <span>
+                        Paybox                        <br>
+                        <small>Visa/MasterCard</small>
+                      </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <label class="radio" for="payment-system-id-3">
+                                            <input type="radio" id="payment-system-id-3" value="3"
+                                                   name="payment_system_id" class="radio-outline">
+                                            <span>
+                        AnyMoney                        <br>
+                        <small>BTC/ETH/LTC</small>
+                      </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input checkbox"><input type="hidden" name="terms_agreement"
+                                                                   value="0"/><label for="terms-agreement"><input
+                                        type="checkbox" name="terms_agreement" value="1" checked="checked"
+                                        id="terms-agreement"><span><a href="{% url 'terms_of_service'%}"
+                                                                      target="_blank">Мен тейлөө шарттарын окуп чыктым жана макулмун</a></span></label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="package_id" value="4"/> <input type="hidden"
+                                                                                      name="recaptcha_response"
+                                                                                      id="recaptchaResponse"/>
+                            <button class="btn btn-primary btn-lg btn-block btn-submit" type="submit">Оплатить <span>19,00 $</span>
+                            </button>
+                        </form>
+                        <br/>
+                        <p>Ишкердик академиянын жаңы семинарлары жана макалалары.</p>
+                        <p>Ай сайын 6 жаңы макала.</p>
+                        <p>
+                            Ишкердик академиянын билим берүү платформасы ай сайын жазылуу менен жеткиликтүү </p>
+                        <p>
+                            Башка жазылуу түрлөрү: </p>
+                        <p>
+                            <a href="{% url 'payments_years' %}" class="text-highlighted primary">
+                                Жыл - 225,00 $/Жыл </a>
+                            же <a href="{% url 'payments_years_pluse' %}" class="text-highlighted primary">
+                            Жыл + - 585,00 $/Жыл </a>
+                        </p>
+                        <p>
+                        </p>
+                        <br/>
+                        <!--              <p class="text-small text-muted">-->
+                        <!--                При оплате через Fondy,  с Вашей карты автоматически будут списываться 19,00 $/мес, которые являются стандартной ценой участия.              </p>-->
+                        <!--              <p class="text-small text-muted">-->
+                        <!--                Вы всегда можете отменить подписку в Вашем личном кабинете и больше списаний не будет.              </p>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    {% endblock %}

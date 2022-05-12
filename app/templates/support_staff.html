@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper ">
+
+    <script>
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LfG-64aAAAAANo58FvEJ4sHSkExUWPLqwc8KxhG', { action: 'registration_for_course' }).then(function (token) {
+      var recaptchaResponse = document.getElementById('recaptchaResponse');
+      recaptchaResponse.value = token;
+    });
+  });
+
+    </script>
+
+    <div class="page">
+        <div class="container">
+            <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a
+                        href="{% url 'lenta' %}" itemprop="item"><i class="far fa-home"></i></a>
+                    <meta itemprop="name" content="Главная">
+                    <meta itemprop="position" content="1">
+                </li>
+                <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>Башкы бетке кайтуу </span>
+                    <meta itemprop="name" content="Зарегистрироваться ">
+                    <meta itemprop="position" content="2">
+                </li>
+            </ul>
+        </div>
+        <section class="checkout checkout-course block">
+            <div class="container">
+                <h1 class="block-title">Кененирээк маалымат алуу үчүн</h1>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-push-6 col-lg-5 col-lg-push-7">
+                        <div class="checkout-course-form">
+                            <p class="block-subtitle">
+                                Адистен кеңеш алуу үчүн төмөнкү анкетаны толтуруңуз </p>
+                            <form method="POST" accept-charset="utf-8" class="order-help-form"
+                                  action="{% url 'packages1' %}">{% csrf_token %}{{ form.as_p }}
+                                <div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>
+                                <div class="row form-row">
+                                    <div class="row form-row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <div class="input checkbox"><input type="hidden" name="terms_agreement"
+                                                                                   value="0"/><label
+                                                        for="terms-agreement"><input type="checkbox"
+                                                                                     name="terms_agreement" value="1"
+                                                                                     checked="checked"
+                                                                                     id="terms-agreement"><span> <a
+                                                        href="{% url 'terms_of_service'%}" target="_blank">Мен тейлөө шарттарын окуп чыктым жана макулмун</a></span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="hidden" name="package_id" value="4"/> <input type="hidden"
+                                                                                                      name="recaptcha_response"
+                                                                                                      id="recaptchaResponse"/>
+                                            <button class="btn btn-primary btn-lg btn-block btn-submit" type="submit">
+                                                Жөнөтүү
+                                            </button>
+                                        </div>
+                                    </div>
+                            </form>
+                            <br/>
+                            <p class="text-small text-muted">
+                                Сиз менен биздин менеджер тез арада байланышат </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    {% endblock %}

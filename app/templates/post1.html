@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content %}
+
+<div class="wrapper wrapper-fancy-bg" xmlns="http://www.w3.org/1999/html">
+
+    <div class="page">
+        <div class="page-header">
+            <div class="container">
+                {% for i in makala %}
+                <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/"
+                                                                                                      itemprop="item"><i
+                            class="far fa-home"></i></a>
+                        <meta itemprop="name" content="Главная">
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a
+                            href="{% url 'all_seminars' %}" itemprop="item">Семинарлар</a>
+                        <meta itemprop="name" content="Статьи">
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li class="active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span>{{ i.title }}</span>
+                        <meta itemprop="name"
+                              content="Клиент (не)всегда прав! – Или как не оказаться заложником собственной лояльности в бизнесе">
+                        <meta itemprop="position" content="3">
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="post-metadata aside hidden-xs hidden-sm">
+                            <div class="post-metadata-item post-type article">Макала</div>
+                            <!--                          <div class="post-metadata-item post-metadata-item-icon text-primary">-->
+                            <!--                <i class="far fa-bolt"></i>-->
+                            <!--                              </div>-->
+                            <!--                                      <div class="post-metadata-item post-metadata-item-icon text-uppercase">-->
+                            <!--                <i class="far fa-star"></i>-->
+                            <!--                Exclusive              </div>-->
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="post-metadata">
+                            <div class="post-metadata-item">
+                                {{ i.date }}
+                            </div>
+                            <div class="post-metadata-item">
+
+                            </div>
+                        </div>
+                        <h1>{{ i.title }}</h1>
+                        <div class="row display-flex">
+                            <div class="col-xs-12 col-sm-6">
+                                <a href="/speakers/9"
+                                   class="post-speaker">
+                                    <div class="post-speaker-img">
+                                        <img src="{% static 'img/logoproz.png' %}" alt=""/></div>
+                                    <div class="post-speaker-body">
+                                        <p class="post-speaker-title">
+                                            "Ишкердик академиясынын" командасы </p>
+                                        <p class="post-speaker-subtitle">
+                                            iacademiyasy@gmail.com </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="block">
+            <div class="container">
+                <section class="course-video block">
+                    <div class="container">
+
+                        <div class="embed-responsive embed-responsive-16by9 post-cover">
+                            <div class="embed-responsive-item">
+                                <video width="800" height="540" controls autoplay>
+                                    <source src="{{ i.video.url }}" type="video/mp4"></source>
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+
+                        <div class="post-about not-authorized">
+                            <div class="post-about" id="post-body" data-post-id="507"
+                            <p></p>
+                            <p></p>
+                            <h2>{{ i.title2 }}</h2> {{ i.description2 }}{{ i.description3 }}
+                        </div>
+                        <p></p>
+                    </div>
+
+
+                    <div class="post-about">
+                        <p class="h3">Комментарийлер</p>
+
+                        <form method="POST" accept-charset="utf-8" class="comment-form" action=""
+                              enctype="multipart/form-data">{% csrf_token %}{{ form.as_p }}
+                            <div class="submit"><input type="submit" class="btn btn-primary" value="Отправить"/></div>
+                        </form>
+
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+    </div>
+    </section>
+
+    <section class="other block">
+        <div class="container">
+            <p class="block-title h2">Муну да окуп көрүңүз</p>
+            <div class="row masonry-grid">
+
+                <div class="col-xs-12 col-sm-6 col-md-4 masonry-grid-item">
+                    <a href="{% url 'all_courses' %}"
+                       class="post-thumbnail boxed
+                                  with-speaker">
+                        <div class="post-thumbnail-body">
+                            <div class="post-metadata">
+                                <div class="post-metadata-item post-type article">Макала</div>
+                            </div>
+                            <p class="post-thumbnail-title text-large">Жаңы жашоо</p>
+                            <p class="post-thumbnail-subtitle">
+                                Кантип өзгөрөм? Жаңы жашоо тренинги </p>
+                            <div class="post-metadata">
+                                <div class="post-metadata-item">
+                                    30 апрель. 2022
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-thumbnail-footer">
+                            <div class="post-speaker">
+                                <div class="post-speaker-img">
+                                    <img src="{% static 'img/logored.png' %}" alt=""/></div>
+                                <div class="post-speaker-body">
+                                    <p class="post-speaker-title">
+                                        Ишкердик академиясы </p>
+                                    <p class="post-speaker-subtitle">
+                                        iakademiasy@gmail.com </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 masonry-grid-item">
+                    <a href="{% url 'all_courses' %}"
+                       class="post-thumbnail boxed
+                                  with-speaker">
+                        <div class="post-thumbnail-img">
+                            <img src="https://static.mk.ru/upload/entities/2021/04/22/15/articles/detailPicture/38/5e/f2/89/df4f769e44ef536b788738f36355ea72.jpg"
+                                 alt="post-thumbnail-img"/></div>
+                        <div class="post-thumbnail-body">
+                            <div class="post-metadata">
+                                <div class="post-metadata-item post-type article">Макала</div>
+                            </div>
+                            <p class="post-thumbnail-title text-large">Акча сарптоо</p>
+                            <p class="post-thumbnail-subtitle">
+                                Акча сабаттуулугу тренинги </p>
+                            <div class="post-metadata">
+                                <div class="post-metadata-item">
+                                    6 май. 2021
+                                </div>
+                                <div class="post-metadata-item">
+                                    &asymp;
+                                    9 мин
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-thumbnail-footer">
+                            <div class="post-speaker">
+                                <div class="post-speaker-img">
+                                    <img src="{% static 'img/logored.png' %}" alt=""/></div>
+                                <div class="post-speaker-body">
+                                    <p class="post-speaker-title">
+                                        Ишкердик академиясы </p>
+                                    <p class="post-speaker-subtitle">
+                                        iakademiyasy@gmail.com </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 masonry-grid-item">
+                    <a href="{% url 'all_courses' %}"
+                       class="post-thumbnail boxed
+                                  with-speaker">
+                        <div class="post-thumbnail-body">
+                            <div class="post-metadata">
+                                <div class="post-metadata-item post-type article">Макала</div>
+                            </div>
+                            <p class="post-thumbnail-title text-large">Экспресс бизнес</p>
+                            <p class="post-thumbnail-subtitle">
+                                Кытайдан жана Турциядан товар алууну үйрөнүү </p>
+                            <div class="post-metadata">
+                                <div class="post-metadata-item">
+                                    7 май. 2022
+                                </div>
+                                <div class="post-metadata-item">
+
+                                    8 мин
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-thumbnail-footer">
+                            <div class="post-speaker">
+                                <div class="post-speaker-img">
+                                    <img src="{% static 'img/logored.png' %}" alt=""/></div>
+                                <div class="post-speaker-body">
+                                    <p class="post-speaker-title">
+                                        Ишкердик академиясы </p>
+                                    <p class="post-speaker-subtitle">
+                                        iakademiyasy@gmail.com </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+{% endblock %}
+
